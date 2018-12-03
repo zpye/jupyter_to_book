@@ -7,11 +7,9 @@ if __name__ == '__main__':
     filedata = f.read()
     f.close()
 
-    title = 'my title'
-    author = 'zpye'
-    newdata = filedata.replace('\\title{book}',
-        '\\title{}{}{}\n\\author{}{}{}'.format('{', title, '}', '{', author, '}'))
-
+    # postprocess
+    newdata = filedata
+	
     f = open(name, 'w', encoding="iso-8859-1")
     f.write(newdata)
     f.close()

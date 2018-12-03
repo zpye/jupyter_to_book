@@ -17,5 +17,5 @@ if __name__ == '__main__':
     p.communicate()
 
     # generate latex
-    p = subprocess.Popen('jupyter nbconvert --to latex --template report book.ipynb')
+    p = subprocess.Popen('jupyter nbconvert --to latex --template book book.ipynb')
     p.communicate()
